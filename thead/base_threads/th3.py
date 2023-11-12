@@ -4,16 +4,16 @@ from time import sleep, perf_counter
 result = "*"
 
 
-def test(time_sleep: float | int = 0, s: str = "*"):
+def task(time_sleep = 0, s: str = "*"):
     global result
     sleep(time_sleep)
     result += f"--{s}!"
 
 
-test()
-thr_1 = threading.Thread(target=test, args=(1, "1"))
+task()
+thr_1 = threading.Thread(target=task, args=(1, "1"))
 thr_1.start()
-thr_2 = threading.Thread(target=test, args=(3, "2"))
+thr_2 = threading.Thread(target=task, args=(3, "2"))
 thr_2.start()
 
 start_t = perf_counter()
