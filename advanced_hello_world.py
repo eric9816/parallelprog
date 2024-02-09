@@ -6,7 +6,7 @@ eng_letters = list(letters + '_')
 hw_lst = list('hello_world')
 #hw_lst = list('zzzzzzzzzzzzzzzz')
 
-result = ['' for _ in range(len(hw_lst))]
+result = ['' for _ in range(1, len(hw_lst) + 1)]
 for idx, hw_letter in enumerate(hw_lst, 0):
     time.sleep(0.03)
     for eng_letter in eng_letters:
