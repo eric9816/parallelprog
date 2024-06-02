@@ -7,11 +7,11 @@ class PrintThread(threading.Thread):  # наследуем оригинальн�
         # Инит вызывается главным потоком
         super().__init__()  # инициализация наследуемого класса threading.Thread
         self.text = text  # создание дополнительных атрибутов
-        print(threading.active_count())
+        print('init', threading.active_count())
 
     def run(self):  # переопределение метода run
         # При вызове метода run создается дополнительный поток
-        print(threading.active_count())
+        print('run', threading.active_count())
         print(self.text)
 
 
