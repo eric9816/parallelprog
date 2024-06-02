@@ -25,7 +25,7 @@ def custom_hook(arg):
     print(f"Номер потока: {exc_thread.ident}")
     print(f"Имя потока: {exc_thread.name}")
     print(f"Путь исключения:")
-    traceback.print_tb(exc_traceback)
+    #traceback.print_tb(exc_traceback)
 
 def task():
     sleep(0.5)
